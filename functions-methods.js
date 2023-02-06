@@ -25,10 +25,11 @@ console.log(getEmailDomain("n.eeken@novi-education.nl"));
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
 function typeOfEmail(eMail) {
-    if (eMail.substring(eMail.indexOf("@")) === "@novi-education.nl")
+    let mail = eMail.substring(eMail.indexOf("@"));
+    if (mail === "@novi-education.nl")
         return "Student";
 
-    else if (eMail.substring(eMail.indexOf("@")) === "@novi.nl")
+    else if (mail === "@novi.nl")
         return "Medewerker";
 
     else return "Extern";
